@@ -1,17 +1,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/Widget.AndroidAPS.AppWidget.Container"
     android:id="@+id/widget_layout"
+    style="@style/Widget.AndroidAPS.AppWidget.Container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/black"
+    android:orientation="vertical"
     android:theme="@style/AppTheme.Launcher.AppWidgetContainer">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/active_profile"
@@ -23,7 +24,8 @@
             android:text="n/a"
             android:textColor="@color/white"
             android:textSize="12sp"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            tools:visibility="gone" />
 
         <TextView
             android:id="@+id/temp_target"
@@ -35,13 +37,15 @@
             android:text="n/a"
             android:textColor="@color/white"
             android:textSize="12sp"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            tools:visibility="gone" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
         android:orientation="horizontal">
 
         <TextView
@@ -50,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:paddingHorizontal="-10dp"
             android:text="00.0"
             android:textSize="60sp"
             android:textStyle="bold"
@@ -68,8 +73,8 @@
 
             <ImageView
                 android:id="@+id/arrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:contentDescription="@string/trend_arrow"
                 android:src="@drawable/ic_flat" />
 
@@ -209,7 +214,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/iob"
-                android:src="@drawable/ic_bolus" />
+                android:src="@drawable/ic_bolus"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/iob"
@@ -242,7 +248,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/anim_carbs"
-                android:contentDescription="@string/cob" />
+                android:contentDescription="@string/cob"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/cob"
@@ -274,7 +281,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/basal"
-                android:src="@drawable/ic_cp_basal_no_tbr" />
+                android:src="@drawable/ic_cp_basal_no_tbr"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/base_basal"
@@ -305,7 +313,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/extended_bolus"
-                android:src="@drawable/ic_actions_start_extended_bolus" />
+                android:src="@drawable/ic_actions_start_extended_bolus"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/extended_bolus"
@@ -338,7 +347,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/a11y_autosens_label"
-                android:src="@drawable/ic_swap_vert_black_48dp_green" />
+                android:src="@drawable/ic_swap_vert_black_48dp_green"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/sensitivity"
@@ -365,7 +375,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:visibility="visible"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText"
+                tools:visibility="gone" />
 
         </LinearLayout>
 
